@@ -11,5 +11,5 @@ public interface UserService {
 	public int count();
 	public boolean update(User user);
 	public void delete(User user);
-	public boolean remove(String userid);
+	public boolean remove(String userid); //
 }
