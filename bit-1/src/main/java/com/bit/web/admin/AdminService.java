@@ -2,12 +2,12 @@ package com.bit.web.admin;
 
 public interface AdminService {
 	
-	public void add(Admin member);
-	public Admin[] list(Admin member);
+	public void add(Admin admin);
+	public Admin[] list(Admin admin);
 	public Admin detail(String userid);
 	public int count();
-	public boolean login(Admin member);
-	public void update(Admin member);
-	public void delete(Admin member);
+	public boolean login(Admin admin);
+	public void update(Admin admin);
+	public void delete(Admin admin);
 
 }
