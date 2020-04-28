@@ -5,11 +5,11 @@ import java.util.List;
 public interface UserService {
 
 	public void add(User user);
-	public List<User> list();
+	public int count();
 	public User login(User user);
 	public User detail(String userid);
-	public int count();
 	public boolean update(User user);
-	public void delete(User user);
-	public boolean remove(String userid); //
+	public boolean remove(String userid);
+	public List<User> list();
+	public boolean dupl(String userid);
 }

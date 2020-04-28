@@ -118,6 +118,7 @@ $('#login_button').click( e => {
 		contentType : 'application/json',
 		
 		success : d => {
+			console.log('LOGIN RESULT ::'+d)
 			if(d.messenger === 'SUCCESS'){ //d.key 값(user, messenger)
 				sessionStorage.setItem('userid',d.user.userid)
 				location.href = "mypage.html"

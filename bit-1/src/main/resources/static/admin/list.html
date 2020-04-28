@@ -34,7 +34,7 @@ $('#sidemenu').css({width : '10%'}).addClass('border_black')
 $('#content').addClass('border_black')
 $('#member_list').addClass('border_black').css({width : '100%'})
 $('#member_list tr').addClass('border_black width_full')
-$.getJSON('/user/list', d => {
+$.getJSON('/admin/list', d => {
 	alert('리스트 수 : '+ d.length)
 	let list = ''
 	for(let i = 0; i < d.length; i++){

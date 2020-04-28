@@ -23,7 +23,8 @@ public class UserController {
 	
 	@PostMapping("/signup")
 	public Messenger join(@RequestBody User user) {
-		int count = userService.count();  
+		int count = userService.count();
+		userService.add(user);
 		return (userService.count() == (count + 1))? Messenger.SUCCESS : Messenger.FAIL;
 	}
 	@GetMapping("/list")
