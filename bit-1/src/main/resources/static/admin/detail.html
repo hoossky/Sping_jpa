@@ -27,20 +27,20 @@ table, tr, td {
 <tr>
 	<td rowspan="4" style="width: 350px;height: 350px;"><img src="https://bit.ly/2SgqQFY"></td>
 	<td style="width: 100px;">이름</td>
-	<td style="width: 250px;"><input id= name type = text/></td>
+	<td style="width: 250px;">홍길동</td>
 </tr>
 <tr>
 	
 	<td>직급</td>
-	<td><input id= position type = text/></td>
+	<td>과장</td>
 </tr>
 <tr>
+	<td></td>
 	<td>이메일</td>
-	<td><input id= email type = text/></td>
 </tr>
 <tr>
-	<td>전화 번호</td>
-	<td><input id= phoneNumber type = text/></td>
+	<td></td>
+	<td>전화번호</td>
 </tr>
 <tr>
 <td ><input id="admin_register" type="button" value="등 록" style = "width : 100%" >
@@ -70,30 +70,7 @@ table, tr, td {
 /*
 name, employNumber, password, position, profile, email, phoneNumber, registerDate
 */
-$('#admin_register').click( e => {
-	e.preventDefault()
-	$.ajax({
-		url: '/admins',
-		type: 'post',
-		data: JSON.stringify({
-			name: $('#name').val(),
-			position: $('#position').val(),
-			email: $('#email').val(),
-			phoneNumber: $('#phoneNumber').val()}),
-		dataType: 'json',
-		contentType: 'application/json',
-		
-		success: d => {
-			if(d=== 'SUCCESS'){
-				location.href = "access.html"
-			}else{
-				location.href = "register.html"
-			}
-		},
-		error: (r, x, err) => {
-			alert(r.status)
-		}
-	})
+$.getJSON('/admins/'+'1234', d => {
 	
 })
 </script>

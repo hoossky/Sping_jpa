@@ -24,8 +24,8 @@ border : solid green;}
 	<img src="https://image.flaticon.com/icons/svg/71/71403.svg" style ="50*50; width: 25px; background-color: green;">
 	<input id="login_button" type="button" value="로그인"/>
 	<input id="join_button" type="button" value="회원 가입"/>
-	<input id="acess_button" type="button" value="접 속"/>
-	<input id="register_button" type="button" value="등 록"/>
+	<input id="acess_button" type="button" value="관리자 접속"/>
+	<input id="register_button" type="button" value="관리자 등록"/>
 	</td></tr>
 	<tr><td id="nav" colspan="4"><h2>감염병 건강정보 정책정보 연구개발 알림·자료 간행물·통계 민원·정보공개 기관소개 사업별홈페이지</h2></td></tr>
 	<tr><td id="content" colspan="4"><img src="http://www.cdc.go.kr/cdc/img/main/visual_default_main_01.jpg" style="width: 1540px;"></td></tr>
@@ -40,9 +40,57 @@ border : solid green;}
 	</table>
 	
 <script>
-$('#register_button').click( e => {
-	e.preventDefault();
-	location.href = ""
+
+$('#register_button')
+.css('cursor','pointer')
+.click(e=>{
+	e.preventDefault()
+	location.href = "admin/register.html" 
+})
+$('#acess_button')
+.css('cursor','pointer')
+.click(e=>{
+	e.preventDefault()
+	location.href = "admin/access.html"
+})
+$('#join_button')
+.css('cursor', 'pointer')
+.click( e => {
+	e.preventDefault()
+	location.href = "user/signup.html" 
+})
+$('#login_button')
+.css('cursor', 'pointer')
+.click( e => {
+	e.preventDefault()
+	location.href = "user/signin.html"
+})
+
+$('#login-button').click(e =>{
+e.preventDefault()
+$.ajax({
+	url: '/admin/login',
+	type: 'post',
+	data: JSON.stringify(
+			{userid: $('#userid').val(),
+			 password: $('#password').val()}),
+	dataType: 'json',
+	contentType: 'application/json',
+	success : d => {
+		if(d === 'SUCCESS'){
+			location.href = "member/list.html"
+		}else{
+			alert('다시 로그인 해주세요')
+			location.href = "index.html"
+		}
+	},
+	error: (request,status,error)=>{
+		alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error)
+	}
+})
+})
+$('#cancel-button').click( e => {
+e.preventDefault()
 })
 
 </script>
