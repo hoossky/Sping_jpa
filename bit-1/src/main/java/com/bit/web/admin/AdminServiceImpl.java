@@ -31,6 +31,8 @@ public class AdminServiceImpl implements AdminService{
 		String startNum = "";
 		for(int i=0; i<4; i++) {
 			startNum += String.valueOf((int)(Math.random()*10));
+			//toString 주소값을 스트링으로
+			//valueOf 연산값을 스트링으로
 		}
 		return startNum;
 	}

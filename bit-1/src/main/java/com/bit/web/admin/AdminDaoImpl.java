@@ -52,7 +52,7 @@ public class AdminDaoImpl implements AdminDao
 			
 		}
 
-		return null;
+		return admin;
 	}
 
 	@Override
