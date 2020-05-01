@@ -1,0 +1,20 @@
+.search{
+text-align: center;
+}
+
+.container {
+  position: relative;
+}
+.topright {
+  position: absolute;
+  top: 25px;
+  right: 200px;
+  font-size: 18px;
+}
+table, tr, td {
+  border: 1px solid black;
+  margin : 0 auto
+}
+input[type=text] {
+border : solid green;
+}
