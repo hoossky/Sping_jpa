@@ -7,10 +7,10 @@ import lombok.Data;
 @Getter @Setter
 public class User {
 	
-	private String name, userid, password, ssn, address, profile, email, registerDate;
+	private String userid, password, name, ssn, address, profile, email,phoneNumber, registerDate;
 	@Override
 	public String toString() {
-		return String.format("%s,%s,%s,%s,%s", name, userid, password, ssn, address);
+		return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s", userid, password, name, ssn, address, profile, email, phoneNumber, registerDate);
 	}
 
 }

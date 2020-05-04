@@ -12,11 +12,11 @@ public enum Data {
 		
 		case USER_PATH: returnValue = "C:"+File.separator+"Users"+File.separator+"bit"+File.separator
 				+"git"+File.separator+"repository2"+File.separator+"bit-1"+File.separator+"src"+File.separator
-				+"main"+File.separator+"resources"+File.separator+"static"+File.separator+"user"+File.separator; break;
+				+"main"+File.separator+"resources"+File.separator+"static"+File.separator+"resources"+File.separator+"file"+File.separator; break;
 				
 		case ADMIN_PATH: returnValue = "C:"+File.separator+"Users"+File.separator+"bit"+File.separator
 				+"git"+File.separator+"repository2"+File.separator+"bit-1"+File.separator+"src"+File.separator
-				+"main"+File.separator+"resources"+File.separator+"static"+File.separator+"admin"+File.separator; break;
+				+"main"+File.separator+"resources"+File.separator+"static"+File.separator+"resources"+File.separator+"file"+File.separator; break;
 				
 		case CSV: returnValue = ".csv"; break;
 		

@@ -25,9 +25,8 @@ public class UserController {
 	}
 	
 	@GetMapping("")
-	public List<User> list(@RequestBody User user){
-		
-		return userService.FindAll();		
+	public List<User> list(){
+		return userService.findAll();		
 	}
 	
 	@GetMapping("/{userid}")

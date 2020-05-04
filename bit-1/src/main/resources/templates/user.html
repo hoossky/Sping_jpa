@@ -3,46 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <title>사용자 페이지</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="/resources/css/global.css" />
 <script type="text/javascript" src="/resources/js/user.js"></script>
 <script type="text/javascript" src="/resources/js/admin.js"></script>
 </head>
 <body>
 
-	
+
 	<table id="home">
-	<tr><td id="title" colspan="1"><img src="http://www.cdc.go.kr/cdc/img/main/h1_logo.png">
-	<div class="search">
-	<td colspan="2"><input id="search" type = "text" placeholder = "검색어를 입력해주세요" style= "width : 70%, height : 100px; height : 25px; width: 300px;"/>
-	<img src="https://image.flaticon.com/icons/svg/71/71403.svg" style ="50*50; width: 25px; background-color: green;"></td>
-	</div>
-	</td></tr>
-	<div class="container">
-  	<div class="topright">
-	<input id="login_button" type="button" value="로그인"/>
-	<input id="join_button" type="button" value="회원 가입"/>
-	<input id="acess_button" type="button" value="관리자 접속"/>
-	<input id="register_button" type="button" value="관리자 등록"/>
-	</div>
-	</div>
-	<tr><td id="nav" colspan="4"><h2>감염병 건강정보 정책정보 연구개발 알림·자료 간행물·통계 민원·정보공개 기관소개 사업별홈페이지</h2></td></tr>
-	<tr><td id="content" colspan="4"><img src="http://www.cdc.go.kr/cdc/img/main/visual_default_main_01.jpg" style="width: 1540px;"></td></tr>
-	<tr><td id="footer"><img src="http://www.cdc.go.kr/cdc/img/main/visual_default_05.jpg">
-	<h3>미세먼지 건강 수칙</h3></td>
-	<td><img src="http://www.cdc.go.kr/cdc/img/main/visual_default_12.png">
-	<h3>법정감염병 분류체계 개편</h3></td>
-	<td><img src="http://www.cdc.go.kr/cdc/img/main/visual_default_10.jpg">
-	<h3>인플루엔자</h3></td>
-	<td><img src="http://www.cdc.go.kr/cdc/img/main/visual_default_08.jpg">
-	<h3>액상형 전자담배 관련 폐손상</h3></td></tr>
+		<tr>
+			<td><img src="http://www.cdc.go.kr/cdc/img/main/h1_logo.png" style="float:right"></td>
+			<td colspan="2" class="search">
+					<input id="search" type="text" placeholder="검색어를 입력해주세요" style="width: 700px; height: 50px" />
+					<img src="https://image.flaticon.com/icons/svg/71/71403.svg" style="width: 45px; background-color: AAEDFF;"></td>
+		</tr>
+			<div class="container">
+			<div class="topright">
+				<input id="login_button" type="button" value="로그인"/>
+				<input id="join_button" type="button" value="회원 가입"/>
+				<input id="acess_button" type="button" value="관리자 접속"/>
+				<input id="register_button" type="button" value="관리자 등록"/>
+			</div>
+			</div>
+		<tr>
+			<td id="nav" colspan="4"><h2>감염병 건강정보 정책정보 연구개발 알림·자료 간행물·통계 민원·정보공개 기관소개 사업별홈페이지</h2></td>
+		</tr>
+		<tr>
+			<td id="content" colspan="4"><img src="http://www.cdc.go.kr/cdc/img/main/visual_default_main_01.jpg" style="width: 1540px;"></td>
+		</tr>
+		<tr>
+			<td id="footer">
+			<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_05.jpg">
+				<h3>미세먼지 건강 수칙</h3></td>
+			<td>
+			<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_12.png">
+				<h3>법정감염병 분류체계 개편</h3></td>
+			<td>
+			<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_10.jpg">
+				<h3>인플루엔자</h3></td>
+			<td>
+			<img src="http://www.cdc.go.kr/cdc/img/main/visual_default_08.jpg">
+				<h3>액상형 전자담배 관련 폐손상</h3></td>
+		</tr>
 	</table>
-	
-<script>
-	user.init()
-	admin.init()
 
-
-</script>
+	<script>
+		user.init()
+		admin.init()
+	</script>
 </body>
 </html>
