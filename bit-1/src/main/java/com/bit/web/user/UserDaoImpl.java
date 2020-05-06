@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao {
 		try {
 			BufferedWriter writer = new BufferedWriter(
 									new FileWriter(
-									new File(Data.USER_PATH.toString() +Data.LIST +Data.CSV), true));
+									new File(Data.USERS.toString()), true));
 			writer.write(user.toString());
 			writer.newLine();
 			writer.flush();
@@ -38,7 +38,7 @@ public class UserDaoImpl implements UserDao {
 		List<User> list = new ArrayList<>();
 		List<String> temp = new ArrayList<>();
 		try {
-			File file = new File(Data.USER_PATH + "user_list.csv");
+			File file = new File(Data.USERS.toString());
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String message = "";
 			while ((message = reader.readLine())!=null) {
@@ -47,7 +47,7 @@ public class UserDaoImpl implements UserDao {
 			reader.close();
 			
 		}catch(Exception e) {
-			System.out.println("에러");
+			System.out.println("사용자 에러");
 			
 		}
 		User u = null;
@@ -72,8 +72,16 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public User selectOne(String userid) {
-		// TODO Auto-generated method stub
-		return null;
+		List<User> list = selectAll();
+		User findUser = null;
+		for(User u : list) { //향상된 for loop
+			if(userid.equals(u.getUserid())) {
+				findUser = u;
+				break;
+			}
+		}
+		
+		return findUser;
 	}
 
 	@Override
@@ -83,7 +91,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public void deleto(User user) {
+	public void delete(User user) {
 		// TODO Auto-generated method stub
 		
 	}

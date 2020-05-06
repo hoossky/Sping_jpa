@@ -22,7 +22,7 @@ public class AdminDaoImpl implements AdminDao{
 		try {
 			BufferedWriter writer = new BufferedWriter(
 									new FileWriter(
-									new File(Data.ADMIN_PATH.toString() + Data.LIST + Data.CSV), true));
+									new File(Data.ADMINS.toString()), true));
 			writer.write(admin.toString());
 			writer.newLine(); // 줄바꿈
 			writer.flush();
@@ -38,7 +38,7 @@ public class AdminDaoImpl implements AdminDao{
 		List<Admin> list = new ArrayList<>();
 		List<String> temp = new ArrayList<>();
 		try {
-			File file = new File(Data.ADMIN_PATH + "admin_list.csv");
+			File file = new File(Data.ADMINS.toString());
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String message = "";
 			while((message = reader.readLine()) != null) {
@@ -71,14 +71,15 @@ public class AdminDaoImpl implements AdminDao{
 
 	@Override
 	public Admin selectOne(String employNumber) {
-		Admin admin = null;
-		try {
-			
-		}catch(Exception e){
-			
+		List<Admin> list = selectAll();
+		Admin findAdmin = null;
+		for(Admin u : list ) {
+			if(employNumber.equals(u.getEmployNumber())) {
+				findAdmin = u;
+				break;
+			}
 		}
-
-		return admin;
+		return findAdmin;
 	}
 
 	@Override

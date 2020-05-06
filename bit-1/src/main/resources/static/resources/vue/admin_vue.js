@@ -1,13 +1,12 @@
 "use strict"
 
-const adminVue  =  {
-			join : () => {
+var adminVue  =  {
+			join : () => { //매핑구조 :
 				return `<table id="home" style=margin : 0 auto;>
 				
 				<tr>
 						<td colspan="3" style = "width: 700px" ><h2>관리자 등록</h2></td>
 				</tr>
-
 				<tr>
 						<td rowspan="4" style="width: 360px; height: 360px"><img src="https://pbs.twimg.com/profile_images/549171896013438979/rqtU6Cvn_400x400.png" style="width: 360px; height: 360px"></td>
 						<td style="width: 100px;">이름</td>

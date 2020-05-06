@@ -1,4 +1,4 @@
-package com.bit.web.user;
+package com.bit.web.lost;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,39 +16,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements UserService{
-	@Autowired UserDao userDao;
+public class LostServiceImpl implements LostService{
+	@Autowired LostDao userDao;
+
 
 	@Override
-	public void join(User user) {
-
-		userDao.insert(user);
-	}
-
-	@Override
-	public List<User> findAll() {
+	public List<Lost> findAll() {
 		return userDao.selectAll();
 	}
 
 	@Override
-	public User FindOne(String userid) {
+	public Lost findOne(String lostid) {
 		
 		
-		return userDao.selectOne(userid);
+		return userDao.selectOne(lostid);
 	}
 
-	@Override
-	public void modify(User user) {
-
-		userDao.update(user);
-	}
-
-	@Override
-	public void remove(User user) {
-
-		userDao.delete(user);
-	}
-
-	
 
 }
